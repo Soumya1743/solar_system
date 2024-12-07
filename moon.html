@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moon</title>
+    <link rel="stylesheet" href="Resources/moon.css">
+    <link rel="stylesheet" href="Resources/cursor.css">
+</head>
+<body>
+    <div style="background-color: black;">
+    
+        <center>
+        <video id="video" autoplay loop muted plays-inline>
+           <source src="Resources/moon bd video.mp4" type="video/mp4">
+           </video>
+       </center>
+       <div class="nav">
+        <a class="nav1" href="index.html" target="_blank">HOME</a>
+        <a class="nav1" href="planets.html" target="_blank">PLANETS</a>
+        <a class="nav1" href="stars.html" target="_blank">STARS</a>
+        <a class="nav1" href="sun.html" target="_blank">SUN</a>
+        <a class="nav1" href="moon.html" target="_blank">MOON</a>
+        <a class="nav1" id="eclipse" href="solar.html" target="_blank">SOLAR ECLIPSE</a>
+        <a class="nav1" id="eclipse" href="lunar.html" target="_blank">LUNAR ECLIPSE</a>
+    </div>
+       </div>
+       <center>
+           <h1 id="moon">Moon</h1>
+           <p id="moonpara">“The moon is a silver queen, and the night is her royal court.”</p>
+           <h1 id="headingmoon">The Moon Is a Great Timekeeper</h1>
+           <p id="moonpara1">Ancient civilizations used the Moon’s phases to track time and create calendars, giving rise to lunar months that are still observed in various cultures today.</p>
+           <h1 id="moonheading1">Birth Of Moon</h1>
+           <p id="moonpara2">The Moon is believed to have formed about 4.5 billion years ago through a process known as the giant impact hypothesis. This theory suggests that shortly after the Earth was formed, it collided with a Mars-sized body named Theia. This colossal impact was so powerful that it ejected a significant amount of material from Earth’s outer layers into orbit around our planet. This debris began to coalesce due to gravitational attraction, forming a disk around the Earth, which eventually aggregated to become the Moon.</p>
+       </center>
+    </div>
+</body>
+
+<script>
+    window.addEventListener('mousemove', function(e) {
+      var arr = [1, 0.9, 0.8, 0.5, 0.2];
+
+      arr.forEach(function(i) {
+        var x = (1 - i) * 75;
+        var star = document.createElement('div');
+
+        star.className = 'star';
+        star.style.top = e.pageY + Math.round(Math.random() * x - x / 2) + 'px';
+        star.style.left = e.pageX + Math.round(Math.random() * x - x / 2) + 'px';
+
+        document.body.appendChild(star);
+
+        window.setTimeout(function() {
+          document.body.removeChild(star);
+        }, Math.round(Math.random() * i * 600));
+      });
+    }, false);
+</script>
+
+</html>

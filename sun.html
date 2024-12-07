@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sun</title>
+    <link rel="stylesheet" href="Resources/sun.css">
+    <link rel="stylesheet" href="Resources/cursor.css">
+</head>
+<body>
+    <div class="nav">
+        <a class="nav1" href="index.html" target="_blank">HOME</a>
+        <a class="nav1" href="planets.html" target="_blank">PLANETS</a>
+        <a class="nav1" href="index.html" target="_blank">STARS</a>
+        <a class="nav1" href="sun.html" target="_blank">SUN</a>
+        <a class="nav1" href="moon.html" target="_blank">MOON</a>
+        <a class="nav1" id="eclipse" href="solar.html" target="_blank">SOLAR ECLIPSE</a>
+            <a class="nav1" id="eclipse" href="lunar.html" target="_blank">LUNAR ECLIPSE</a>
+    </div>
+    <div style="background-color: black;">
+    
+        <center>
+        <video id="video" autoplay loop muted plays-inline>
+           <source src="Resources/Sun rising video.mp4" type="video/mp4">
+           </video>
+       </center>
+       </div>
+       <center>
+       <h1 id="sun">Sun</h1>
+       <p id="sunpara">"We all have our own sun within us. Let it shine."</p>
+       <h1 id="sunheading1">The Sun is Super Hot!</h1>
+       <p id="sunpara1">The Sun’s surface temperature is around 5,500°C (9,932°F), but its outer atmosphere (corona) can reach over 1 million°C (1.8 million°F) — even hotter than its surface!</p>
+       <h1 id="sunheading">Birth Of Sun</h1>
+       <p id="sunpara1">The Sun was born around 4.6 billion years ago from a giant cloud of gas and dust known as a solar nebula. This nebula, mostly made of hydrogen and helium, began to collapse under its own gravity, possibly triggered by a nearby supernova explosion. As it collapsed, the material gathered into a spinning disk, with the center forming a hot, dense protostar. Over time, the pressure and temperature in the core increased until nuclear fusion ignited, turning hydrogen into helium and releasing immense energy. This marked the birth of the Sun as a star. The remaining gas and dust around it formed the planets and other bodies in the solar system.</p>
+       </center>
+    </div>
+</body>
+
+<script>
+    window.addEventListener('mousemove', function(e) {
+      var arr = [1, 0.9, 0.8, 0.5, 0.2];
+
+      arr.forEach(function(i) {
+        var x = (1 - i) * 75;
+        var star = document.createElement('div');
+
+        star.className = 'star';
+        star.style.top = e.pageY + Math.round(Math.random() * x - x / 2) + 'px';
+        star.style.left = e.pageX + Math.round(Math.random() * x - x / 2) + 'px';
+
+        document.body.appendChild(star);
+
+        window.setTimeout(function() {
+          document.body.removeChild(star);
+        }, Math.round(Math.random() * i * 600));
+      });
+    }, false);
+</script>
+
+</html>

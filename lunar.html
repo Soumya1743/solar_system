@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Resources/lunar.css">
+    <link rel="stylesheet" href="Resources/cursor.css">
+</head>
+<body>
+    <div style="background-color: black;">
+    
+        <center>
+        <video id="video" autoplay loop muted plays-inline>
+           <source src="Resources/Lunar Eclipse_ Animation.mp4" type="video/mp4">
+           </video>
+       </center>
+       </div>
+           <div id="container">
+               <div id="word">
+                   <span>L</span>
+                   <span>u</span>
+                   <span>n</span>
+                   <span>a</span>
+                   <span>r</span>
+                   &emsp13;&emsp13; &emsp13;&emsp13; &emsp13;&emsp13;
+                   <span>E</span>
+                   <span>c</span>
+                   <span>l</span>
+                   <span>i</span>
+                   <span>p</span>
+                   <span>s</span>
+                   <span>e</span>
+                   
+   
+               </div>
+           </div>
+           <div id="box">
+               <p id="para">A lunar eclipse occurs when the Earth passes directly between the Sun and the Moon, casting its shadow on the Moon. This alignment only happens during a full moon when the Sun, Earth, and Moon are perfectly aligned.  </p>
+              
+           </div>
+</body>
+<script>
+    window.addEventListener('mousemove', function(e) {
+      var arr = [1, 0.9, 0.8, 0.5, 0.2];
+
+      arr.forEach(function(i) {
+        var x = (1 - i) * 75;
+        var star = document.createElement('div');
+
+        star.className = 'star';
+        star.style.top = e.pageY + Math.round(Math.random() * x - x / 2) + 'px';
+        star.style.left = e.pageX + Math.round(Math.random() * x - x / 2) + 'px';
+
+        document.body.appendChild(star);
+
+        window.setTimeout(function() {
+          document.body.removeChild(star);
+        }, Math.round(Math.random() * i * 600));
+      });
+    }, false);
+</script>
+</html>

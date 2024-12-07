@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stars</title>
+    <link rel="stylesheet" href="Resources/stars.css">
+    <link rel="stylesheet" href="Resources/cursor.css">
+</head>
+
+<body>
+    <div class="stars">
+        <div class="main">
+            <div class="nav">
+                <a class="nav1" href="index.html" target="_blank">HOME</a>
+                <a class="nav1" href="planets.html" target="_blank">PLANETS</a>
+                <a class="nav1" href="stars.html" target="_blank">STARS</a>
+                <a class="nav1" href="sun.html" target="_blank">SUN</a>
+                <a class="nav1" href="moon.html" target="_blank">MOON</a>
+                <a class="nav1" id="eclipse" href="solar.html" target="_blank">SOLAR ECLIPSE</a>
+                <a class="nav1" id="eclipse" href="lunar.html" target="_blank">LUNAR ECLIPSE</a>
+            </div>
+            <div class="body">
+                <h1 class="heading">Solar System <br> Exploration</h1>
+                <p class="para">Join us as we explore our planetary neighborhood: <br> The Sun, planets, moons, eclipse,
+                    and
+                    asteroids.</p>
+            </div>
+        </div>
+
+        <h1 class="stars_heading">Explore - <br> The Night Sky</h1>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+        <div class="stars_banner2">
+            <div class="stars_banner_flex2">
+                <div class="stars_banner_block1">
+                    <h1 class="stars_banner2_heading">Birth</h1>
+                    <img src="Resources/stars_birth.webp" alt="" class="stars_birth_image">
+                </div>
+                <div class="stars_banner_block2">
+                    <p class="stars_banner2_para">Stars form in large clouds of gas and dust called molecular clouds.
+                        Molecular clouds range from 1,000 to 10 million times the mass of the Sun and can span as much
+                        as
+                        hundreds of light-years. Molecular clouds are cold which causes gas to clump, creating
+                        high-density
+                        pockets. Some of these clumps can collide with each other or collect more matter, strengthening
+                        their gravitational force as their mass grows. Eventually, gravity causes some of these clumps
+                        to
+                        collapse.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <br><br>
+
+        <div class="stars_banner2">
+            <div class="stars_banner_flex2">
+                <div class="stars_banner_block2">
+                    <p class="stars_banner2_para">Stars form in large clouds of gas and dust called molecular clouds.
+                        Molecular clouds range from 1,000 to 10 million times the mass of the Sun and can span as much
+                        as
+                        hundreds of light-years. Molecular clouds are cold which causes gas to clump, creating
+                        high-density
+                        pockets. Some of these clumps can collide with each other or collect more matter, strengthening
+                        their gravitational force as their mass grows. Eventually, gravity causes some of these clumps
+                        to
+                        collapse.</p>
+                </div>
+                <div class="stars_banner_block4">
+                    <h1 class="stars_banner2_heading">Birth</h1>
+                    <img src="Resources/life.webp" alt="" class="stars_birth_image2">
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="stars_banner2">
+            <div class="stars_banner_flex2">
+                <div class="stars_banner_block1">
+                    <h1 class="stars_banner2_heading">Death</h1>
+                    <img src="Resources/death.webp" alt="" class="stars_birth_image">
+                </div>
+                <div class="stars_banner_block2">
+                    <p class="stars_banner2_para">At the beginning of the end of a star’s life, its core runs out of
+                        hydrogen to convert into helium. The energy produced by fusion creates pressure inside the star
+                        that balances gravity’s tendency to pull matter together, so the core starts to collapse. But
+                        squeezing the core also increases its temperature and pressure, making the star slowly puff up.
+                        However, the details of the late stages of the star’s death depend strongly on its mass.</p>
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+</body>
+
+
+<script>
+    window.addEventListener('mousemove', function (e) {
+        var arr = [1, 0.9, 0.8, 0.5, 0.2];
+
+        arr.forEach(function (i) {
+            var x = (1 - i) * 75;
+            var star = document.createElement('div');
+
+            star.className = 'star';
+            star.style.top = e.pageY + Math.round(Math.random() * x - x / 2) + 'px';
+            star.style.left = e.pageX + Math.round(Math.random() * x - x / 2) + 'px';
+
+            document.body.appendChild(star);
+
+            window.setTimeout(function () {
+                document.body.removeChild(star);
+            }, Math.round(Math.random() * i * 600));
+        });
+    }, false);
+</script>
+
+</html>

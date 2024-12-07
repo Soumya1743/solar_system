@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hackathon</title>
+    <link rel="stylesheet" href="./Resources/styles.css">
+    <link rel="stylesheet" href="./Resources/cursor.css">
+</head>
+
+<body>
+
+    <div class="main">
+        <video class="video" autoplay loop muted plays-inline>
+            <source src="Resources/background.mp4" type="video/mp4">
+        </video>
+        <br>
+        <div class="nav">
+            <img src="Resources/logo1.png" alt="" style="width: 13rem; margin-top: 0.8rem; float: left;">
+            <a class="nav1" href="index.html" target="_blank">HOME</a>
+            <a class="nav1" href="planets.html" target="_blank">PLANETS</a>
+            <a class="nav1" href="stars.html" target="_blank">STARS</a>
+            <a class="nav1" href="sun.html" target="_blank">SUN</a>
+            <a class="nav1" href="moon.html" target="_blank">MOON</a>
+            <a class="nav1" id="eclipse" href="solar.html" target="_blank">SOLAR ECLIPSE</a>
+            <a class="nav1" id="eclipse" href="lunar.html" target="_blank">LUNAR ECLIPSE</a>
+        </div>
+        <div class="body1">
+            <h1 class="heading">Solar System <br> Exploration</h1>
+            <p class="para">Join us as we explore our planetary neighborhood: <br> The Sun, planets, moons, eclipse, and
+                asteroids.</p>
+        </div>
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br>
+
+    <div class="banner2">
+        <div class="banner2_block1"></div>
+        <div class="banner2_block2">
+            <h1 class="heading2">The Solar System Overview</h1>
+            <p class="banner2_para1">The solar system has one star, eight planets, five officially named dwarf planets,
+                hundreds of moons,
+                thousands of comets, and more than a million asteroids.</p>
+            <p class="banner2_para1">Our solar system is located in the Milky Way, a barred spiral galaxy with two major
+                arms, and two minor
+                arms. Our Sun is in a small, partial arm of the Milky Way called the Orion Arm, or Orion Spur, between
+                the Sagittarius and Perseus arms. Our solar system orbits the center of the galaxy at about 515,000 mph
+                (828,000 kph). It takes about 230 million years to complete one orbit around the galactic center.</p>
+            <p class="banner2_para1">
+                We call it the solar system because it is made up of our star, the Sun, and everything bound to it by
+                gravity.
+            </p>
+        </div>
+        <div class="banner2_block3"></div>
+    </div>
+
+    <div class="banner3">
+        <div class="banner3_block">
+            <img class="banner3_image1" src="Resources/1.avif" alt="">
+            <div class="banner3_card">
+                <h1 class="name">Solar System</h1>
+            </div>
+        </div>
+        <div class="banner3_block">
+            <img class="banner3_image2" src="Resources/2.jpg" alt="">
+            <div class="banner3_card">
+                <h1 class="name">Solar Eclipse</h1>
+            </div>
+        </div>
+        <div class="banner3_block">
+            <img class="banner3_image3" src="Resources/3.jpg" alt="">
+            <div class="banner3_card">
+                <h1 class="name">Asteroids</h1>
+            </div>
+        </div>
+        <div class="banner3_block">
+            <img class="banner3_image4" src="Resources/4.webp" alt="">
+            <div class="banner3_card">
+                <h1 class="name">Sun</h1>
+            </div>
+        </div>
+        <div class="banner3_block">
+            <img class="banner3_image5" src="Resources/5.jpg" alt="">
+            <div class="banner3_card">
+                <h1 class="name">Moon</h1>
+            </div>
+        </div>
+    </div>
+
+    <br><br><br><br>
+
+
+
+    <div class="footer">
+        
+    </div>
+   
+    
+    <script>
+        window.addEventListener('mousemove', function(e) {
+          var arr = [1, 0.9, 0.8, 0.5, 0.2];
+    
+          arr.forEach(function(i) {
+            var x = (1 - i) * 75;
+            var star = document.createElement('div');
+    
+            star.className = 'star';
+            star.style.top = e.pageY + Math.round(Math.random() * x - x / 2) + 'px';
+            star.style.left = e.pageX + Math.round(Math.random() * x - x / 2) + 'px';
+    
+            document.body.appendChild(star);
+    
+            window.setTimeout(function() {
+              document.body.removeChild(star);
+            }, Math.round(Math.random() * i * 600));
+          });
+        }, false);
+    </script>
+</body>
+
+
+
+
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Resources/solar.css">
+    <link rel="stylesheet" href="Resources/cursor.css">
+</head>
+<body>
+    <div style="background-color: black;">
+    
+     <center>
+     <video id="video" autoplay loop muted plays-inline>
+        <source src="Resources/solar eclipse video.mp4" type="video/mp4">
+        </video>
+    </center>
+    </div>
+        <div id="container">
+            <div id="word">
+                <span>S</span>
+                <span>o</span>
+                <span>l</span>
+                <span>a</span>
+                <span>r</span>
+                &emsp13;&emsp13; &emsp13;&emsp13; &emsp13;&emsp13;
+                <span>E</span>
+                <span>c</span>
+                <span>l</span>
+                <span>i</span>
+                <span>p</span>
+                <span>s</span>
+                <span>e</span>
+                
+
+            </div>
+        </div>
+        <div id="box">
+            <p id="para">A solar eclipse happens when the moon comes in between the sun and the Earth. As a result, the moon blocks the light of the sun from reaching the Earth's surface and casts a shadow on it. This occurs during the new moon phase. </p>
+           
+        </div>
+</body>
+
+<script>
+    window.addEventListener('mousemove', function(e) {
+      var arr = [1, 0.9, 0.8, 0.5, 0.2];
+
+      arr.forEach(function(i) {
+        var x = (1 - i) * 75;
+        var star = document.createElement('div');
+
+        star.className = 'star';
+        star.style.top = e.pageY + Math.round(Math.random() * x - x / 2) + 'px';
+        star.style.left = e.pageX + Math.round(Math.random() * x - x / 2) + 'px';
+
+        document.body.appendChild(star);
+
+        window.setTimeout(function() {
+          document.body.removeChild(star);
+        }, Math.round(Math.random() * i * 600));
+      });
+    }, false);
+</script>
+
+</html>
+
