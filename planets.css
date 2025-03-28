@@ -1,0 +1,112 @@
+.video{
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    left: 0;
+}
+.nav{
+    color: white;
+    position: relative;
+    float: right;
+    margin-right: 1rem;
+    margin-top: 0.1rem;
+    margin-right: 2rem;
+    border: 3px solid #ffffff1d;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    padding-right: 3rem;
+    padding-left: 17rem;
+}
+.nav1{
+    margin-left: 4rem;
+    font-size: 1.5rem;
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: 0.3rem;
+    color: white;
+    text-decoration: none;
+}
+.nav1:hover{
+    background-color: black;
+    color: white;
+    padding: 1rem;
+    border-radius: 10px;
+    border-bottom: 4px solid red;
+    border-right: 5px solid red;
+    cursor: pointer;
+}
+.body{
+    margin-left: 2rem;
+    margin-top: 15rem;
+}
+.heading1{
+    font-size: 7rem;
+    color: white;
+    font-family: Brush Script MT;
+    text-shadow: #ffffff1d;
+    letter-spacing: 0.5rem;
+    background: linear-gradient(to right, red, white, white, white, red);
+    color: transparent;
+    -webkit-background-clip: text;
+}
+.para1{
+    color: white;
+    font-family: cursive;
+    letter-spacing: 0.2rem;
+    font-size: 1.2rem;
+}
+
+.planets_banner2_heading{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 3rem;
+    text-align: center;
+}
+.anchors{
+    padding: 3rem;
+    margin-bottom: 5rem;
+    text-align: center;
+}
+.planets_anchors{
+    text-decoration: none;
+    margin: 1.5rem;
+    font-size: 1.4rem;
+    color: rgb(245, 190, 89);
+    font-family: "Sofia", sans-serif;
+    letter-spacing: 0.3rem;
+}
+.planets_anchors:hover{
+    cursor: pointer;
+    color: white;
+    transition: all 1s ease-in-out;
+    box-shadow: 0px 0px 10px gray;
+    padding: 1rem;
+    border-radius: 20px;
+    background-color: orange;
+
+}
+.image1{
+    width: 40rem;
+    border-radius: 30px;
+    margin-top: 10rem;
+}
+.image1:hover{
+    transform: scale(1.2);
+    box-shadow: 0px 0px 20px white;
+    transition: all 1s ease-in-out;
+}
+#planets_banner2_block1, #planets_banner2_block2, #planets_banner2_block3, #planets_banner2_block4, #planets_banner2_block5, #planets_banner2_block6, #planets_banner2_block7, #planets_banner2_block8{
+    margin: 5rem;
+    padding: 5rem;
+    border-radius: 20px;
+    display: flex;
+    background-image: url('galaxy1.jpg');
+}
+.span{
+    margin-left: 5rem;
+    line-height: 2rem;
+    font-family: cursive;
+    color: white;
+}
+

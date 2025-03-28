@@ -1,0 +1,152 @@
+.video{
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    left: 0;
+}
+.nav{
+    color: white;
+    position: relative;
+    float: right;
+    margin-right: 1rem;
+    margin-top: 0.1rem;
+    margin-right: 2rem;
+    border: 3px solid #ffffff1d;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    padding-right: 3rem;
+    padding-left: 10rem;
+    position: fixed;
+}
+.nav1{
+    margin-left: 4rem;
+    font-size: 1.2rem;
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: 0.3rem;
+    color: white;
+    text-decoration: none;
+}
+.nav1:hover{
+    background-color: black;
+    color: white;
+    padding: 1rem;
+    border-radius: 10px;
+    border-bottom: 4px solid red;
+    border-right: 5px solid red;
+    cursor: pointer;
+}
+.body1{
+    margin-left: 2rem;
+    margin-top: 15rem;
+}
+.heading{
+    font-size: 7rem;
+    color: white;
+    font-family: Brush Script MT;
+    text-shadow: #ffffff1d;
+    letter-spacing: 0.5rem;
+    background: linear-gradient(to right, rgb(0, 0, 169), white, white, white, blue);
+    color: transparent;
+    -webkit-background-clip: text;
+}
+.para{
+    color: rgb(255, 63, 137);
+    font-size: 2rem;
+    font-family: Papyrus;
+    border: 3px solid #ffffff1d;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    height: 6rem;
+    width: 50rem;
+    text-align: center;
+    margin-top: -50px;
+    box-shadow: 0px 0px 20px black;
+}
+.banner2{
+    display: flex;
+}
+.banner2_block1, .banner2_block3{
+    width: 20rem;
+}
+.banner2_block2{
+    width: 60rem;
+    text-align:justify;
+}
+.heading2{
+    color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 4rem;
+}
+.banner2_para1{
+    font-size: 1.7rem;
+    font-family: Brush Script MT;
+}
+
+.banner3{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.banner3_image1, .banner3_image2, .banner3_image3, 
+.banner3_image4, .banner3_image5{
+    width: 30rem;
+    height: 25rem;
+    padding: 2rem;
+    border-radius: 50px;
+}
+
+.banner3_image1:hover, .banner3_image2:hover, .banner3_image3:hover, .banner3_image4:hover, .banner3_image5:hover{
+    transform: scale(0.5);
+}
+.banner3_block{
+    height: 20rem;
+    width: 27rem;
+    text-align: center;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 7px solid aliceblue;
+    position: relative;
+}
+.banner3_card{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: -100%;
+    position: absolute;
+    background-color: #01020238;
+    backdrop-filter: blur(5px);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: 2s
+}
+.banner3_block:hover .banner3_card{
+    right: 0;
+}
+.name{
+    color: white;
+    font-family: Brush Script MT;
+    font-size: 2.5rem;
+    letter-spacing: 1rem;
+}
+
+.list{
+    display: none;
+}
+#eclipse:hover .list{
+    display: block;
+}
+
+
+
+.footer{
+    height: 200px;
+    width: 200px;
+    color: black;
+    border-radius: 50%;
+}
